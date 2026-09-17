@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dmoamiw2q0oo2"]
+
+[ext_resource type="Texture2D" uid="uid://cyrlnk443owsa" path="res://textures/Poliigon_GrassPatchyGround_4585/1K/Poliigon_GrassPatchyGround_4585_BaseColor.jpg" id="1_yxsye"]
+[ext_resource type="Texture2D" uid="uid://30svfnyv5ul3" path="res://textures/Poliigon_GrassPatchyGround_4585/1K/Poliigon_GrassPatchyGround_4585_Normal.png" id="2_6qaxw"]
+
+[resource]
+albedo_texture = ExtResource("1_yxsye")
+normal_enabled = true
+normal_texture = ExtResource("2_6qaxw")
+uv1_scale = Vector3(25, 25, 25)

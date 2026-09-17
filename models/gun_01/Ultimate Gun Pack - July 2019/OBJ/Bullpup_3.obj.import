@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dn3r6j08hj5ux"
+path="res://.godot/imported/Bullpup_3.obj-b9c74b0e688aa3df04f3132d10598c5f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bullpup_3.obj-b9c74b0e688aa3df04f3132d10598c5f.mesh"]
+
+source_file="res://models/gun_01/Ultimate Gun Pack - July 2019/OBJ/Bullpup_3.obj"
+dest_files=["res://.godot/imported/Bullpup_3.obj-b9c74b0e688aa3df04f3132d10598c5f.mesh", "res://.godot/imported/Bullpup_3.obj-b9c74b0e688aa3df04f3132d10598c5f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

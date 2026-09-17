@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bgpsdrns3e5yr"
+path="res://.godot/imported/Pistol_5.obj-94bb52116920dcf0134d8a6d2f64cedd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Pistol_5.obj-94bb52116920dcf0134d8a6d2f64cedd.mesh"]
+
+source_file="res://models/gun_01/Ultimate Gun Pack - July 2019/OBJ/Pistol_5.obj"
+dest_files=["res://.godot/imported/Pistol_5.obj-94bb52116920dcf0134d8a6d2f64cedd.mesh", "res://.godot/imported/Pistol_5.obj-94bb52116920dcf0134d8a6d2f64cedd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
