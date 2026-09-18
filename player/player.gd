@@ -6,18 +6,28 @@ const JUMP_VELOCITY = 4.5
 
 const MOUSE_SENSIBILITY = 0.003
 var _gun_pitch: float = 0.0
+const VERTICAL_LOOK_MAX_ANGLE = 45
+
+@onready var bullet = preload("res://player_bullet/player_bullet.tscn")
+@onready var muzzle = $"Body/AssaultRifle2_1/Muzzle"
 
 @onready var gun = $"Body/AssaultRifle2_1"
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * MOUSE_SENSIBILITY)
-		_gun_pitch -= -event.relative.y * MOUSE_SENSIBILITY
-		_gun_pitch = clamp(_gun_pitch, deg_to_rad(-30), deg_to_rad(30))
+		_gun_pitch -= event.relative.y * MOUSE_SENSIBILITY
+		_gun_pitch = clamp(_gun_pitch, deg_to_rad(-VERTICAL_LOOK_MAX_ANGLE), deg_to_rad(VERTICAL_LOOK_MAX_ANGLE))
 		gun.rotation.z = _gun_pitch
+	if event is InputEventMouseButton: # testa se clicou com o mouse
+		if event.button_index == 1: # testa se o botão ESQUERDO
+			var b = bullet.instantiate()
+			get_parent().add_child(b)
+			b.global_position = muzzle.global_position
+			b.global_rotation = muzzle.global_rotation
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

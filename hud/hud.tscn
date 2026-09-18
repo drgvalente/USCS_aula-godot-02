@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b8tvdhcvbtpst"]
+
+[node name="HUD" type="Control" unique_id=2124468196]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Game_name" type="RichTextLabel" parent="." unique_id=1084270994]
+layout_mode = 0
+offset_right = 560.0
+offset_bottom = 143.0
+theme_override_colors/default_color = Color(0.41960785, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+theme_override_font_sizes/bold_font_size = 30
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+bbcode_enabled = true
+text = "[b]RICOCHETE [color=red][pulse]2[/pulse][/color][/b]: [i]A MISSÃO[/i]
+[wave]UM FPS DA TURMA [rainbow]4JOG[/rainbow][/wave]
+[tornado freq=1]Disciplina: Multiplataforma[/tornado]"
+horizontal_alignment = 1
+vertical_alignment = 1

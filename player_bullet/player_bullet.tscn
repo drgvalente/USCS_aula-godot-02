@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b5j70abahbitn"]
+
+[ext_resource type="Script" uid="uid://8op51pt6tcd4" path="res://player_bullet/player_bullet.gd" id="1_p3hgn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i7drx"]
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_k6yt6"]
+material = SubResource("StandardMaterial3D_i7drx")
+radius = 0.1
+height = 0.2
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_i7drx"]
+radius = 0.1
+
+[node name="PlayerBullet" type="Area3D" unique_id=1092851401]
+script = ExtResource("1_p3hgn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=498312625]
+mesh = SubResource("SphereMesh_k6yt6")
+
+[node name="Timer" type="Timer" parent="." unique_id=567655955]
+one_shot = true
+autostart = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1730837506]
+shape = SubResource("SphereShape3D_i7drx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
